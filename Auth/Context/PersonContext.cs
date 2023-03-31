@@ -17,10 +17,7 @@ public class PersonContext : DbContext
 
         //TODO: Datos initiales
         List<User> userInit = new List<User>();
-        userInit.Add(new User()
-        {
-            UserId = Guid.Parse("71c87875-4439-4d7c-ba96-f8ba9136dbaa"),
-            Name = "Carlyle Komalram",
+        userInit.Add(new User(){UserId = Guid.Parse("71c87875-4439-4d7c-ba96-f8ba9136dbaa"),Name = "Carlyle Komalram"});
             // Email = "ckomalram@gmail.com",
             // Password = "12345",
             // Identification = "8-873-387",
@@ -28,25 +25,11 @@ public class PersonContext : DbContext
             // TypeId = IdentificationType.Idcard,
             // Role = Role.Admin,
             // Status = StatusPerson.Active
-        });
-
-        userInit.Add(new User()
-        {
-            UserId = Guid.Parse("71c87875-4439-4d7c-ba96-f8ba9136dba1"),
-            Name = "Yoainaris Concepcion",
-            // Email = "yoainaris@gmail.com",
-            // Password = "12345",
-            // Identification = "8-920-953",
-            // FechaCreado = DateTime.Now,
-            // TypeId = IdentificationType.Idcard,
-            // Role = Role.Aprover,
-            // Status = StatusPerson.Active
-        });
 
         // Builder Usuarios
         modelbuilder.Entity<User>(user =>
         {
-            user.ToTable("Usuario");
+            user.ToTable("User");
             user.HasKey(p => p.UserId);
             user.Property(p => p.Name).IsRequired();
             // user.Property(p => p.Email);

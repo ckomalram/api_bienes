@@ -1,7 +1,7 @@
 using System.Text.Json.Serialization;
 
-namespace Auth.Models
-{
+namespace Auth.Models;
+
     public class User
     {
         /**
@@ -26,4 +26,4 @@ namespace Auth.Models
 
     }
 
-}
+

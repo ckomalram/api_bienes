@@ -1,6 +1,5 @@
-using Microsoft.EntityFrameworkCore;
+// using Microsoft.EntityFrameworkCore;
 using Auth.Context;
-using Auth.Models;
 using Auth.Services;
 
 
@@ -14,7 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Conexion a sql server
-builder.Services.AddSqlServer<PersonContext>(builder.Configuration.GetConnectionString("cnBbienes"));
+builder.Services.AddSqlServer<PersonContext>(builder.Configuration.GetConnectionString("cnbbienes"));
 
 // TODO : Servicio de USUARIOS
 builder.Services.AddScoped<IUserService,UserService>();
