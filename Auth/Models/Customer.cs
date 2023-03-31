@@ -17,6 +17,8 @@ namespace Auth.Models
         public IdentificationType IdType { get; set; }
         public StatusPerson Status { get; set; }
 
+        public DateTime FechaCreado { get; set; }
+
         [JsonIgnore]
         public string Resumen { get; set; }
 

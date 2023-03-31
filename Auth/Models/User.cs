@@ -18,6 +18,7 @@ namespace Auth.Models
         public Role Role { get; set; }
 
         public StatusPerson Status { get; set; }
+        public DateTime FechaCreado { get; set; }
 
 
         [JsonIgnore]
