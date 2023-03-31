@@ -5,8 +5,8 @@ namespace Auth.Context;
 
 public class PersonContext : DbContext
 {
-    public DbSet<User> Usuarios { get; set; }
-    public DbSet<Customer> Clientes { get; set; }
+    public DbSet<User> Users { get; set; }
+    public DbSet<Customer> Customers { get; set; }
 
     //constructor with base values
     public PersonContext(DbContextOptions<PersonContext> options) : base(options) { }

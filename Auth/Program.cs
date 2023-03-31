@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Auth.Context;
 using Auth.Models;
+using Auth.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +17,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSqlServer<PersonContext>(builder.Configuration.GetConnectionString("cnBbienes"));
 
 // TODO : Servicio de USUARIOS
+builder.Services.AddScoped<IUserService,UserService>();
+
 // TODO : Servicio de CLIENTES
 
 var app = builder.Build();
