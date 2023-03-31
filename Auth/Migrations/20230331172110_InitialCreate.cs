@@ -3,14 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
-
 namespace Auth.Migrations
 {
-    /// <inheritdoc />
     public partial class InitialCreate : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -55,8 +51,8 @@ namespace Auth.Migrations
                 columns: new[] { "Id", "Email", "FechaCreado", "IdType", "Identification", "Name", "Phonenumber", "Status" },
                 values: new object[,]
                 {
-                    { new Guid("71c87875-4439-4d7c-ba96-f8ba9136dba2"), "aagrzada@gmail.com", new DateTime(2023, 3, 31, 11, 52, 53, 540, DateTimeKind.Local).AddTicks(7829), 0, "8-873-000", "Alexander Agrazal", "12345", 0 },
-                    { new Guid("71c87875-4439-4d7c-ba96-f8ba9136dba3"), "hdegracia@gmail.com", new DateTime(2023, 3, 31, 11, 52, 53, 540, DateTimeKind.Local).AddTicks(7836), 0, "8-000-387", "Hector De Gracia", "12345", 0 }
+                    { new Guid("71c87875-4439-4d7c-ba96-f8ba9136dba2"), "aagrzada@gmail.com", new DateTime(2023, 3, 31, 12, 21, 10, 731, DateTimeKind.Local).AddTicks(6397), 0, "8-873-000", "Alexander Agrazal", "12345", 0 },
+                    { new Guid("71c87875-4439-4d7c-ba96-f8ba9136dba3"), "hdegracia@gmail.com", new DateTime(2023, 3, 31, 12, 21, 10, 731, DateTimeKind.Local).AddTicks(6403), 0, "8-000-387", "Hector De Gracia", "12345", 0 }
                 });
 
             migrationBuilder.InsertData(
@@ -64,12 +60,11 @@ namespace Auth.Migrations
                 columns: new[] { "Id", "Email", "FechaCreado", "IdType", "Identification", "Name", "Password", "Role", "Status" },
                 values: new object[,]
                 {
-                    { new Guid("71c87875-4439-4d7c-ba96-f8ba9136dba1"), "yoainaris@gmail.com", new DateTime(2023, 3, 31, 11, 52, 53, 540, DateTimeKind.Local).AddTicks(6751), 0, "8-920-953", "Yoainaris Concepcion", "12345", 0, 0 },
-                    { new Guid("71c87875-4439-4d7c-ba96-f8ba9136dbaa"), "ckomalram@gmail.com", new DateTime(2023, 3, 31, 11, 52, 53, 540, DateTimeKind.Local).AddTicks(6734), 0, "8-873-387", "Carlyle Komalram", "12345", 0, 0 }
+                    { new Guid("71c87875-4439-4d7c-ba96-f8ba9136dba1"), "yoainaris@gmail.com", new DateTime(2023, 3, 31, 12, 21, 10, 731, DateTimeKind.Local).AddTicks(5292), 0, "8-920-953", "Yoainaris Concepcion", "12345", 0, 0 },
+                    { new Guid("71c87875-4439-4d7c-ba96-f8ba9136dbaa"), "ckomalram@gmail.com", new DateTime(2023, 3, 31, 12, 21, 10, 731, DateTimeKind.Local).AddTicks(5272), 0, "8-873-387", "Carlyle Komalram", "12345", 0, 0 }
                 });
         }
 
-        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

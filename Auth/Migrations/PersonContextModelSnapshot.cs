@@ -17,10 +17,10 @@ namespace Auth.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.4")
+                .HasAnnotation("ProductVersion", "6.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
             modelBuilder.Entity("Auth.Models.Customer", b =>
                 {
@@ -66,7 +66,7 @@ namespace Auth.Migrations
                         {
                             Id = new Guid("71c87875-4439-4d7c-ba96-f8ba9136dba2"),
                             Email = "aagrzada@gmail.com",
-                            FechaCreado = new DateTime(2023, 3, 31, 11, 52, 53, 540, DateTimeKind.Local).AddTicks(7829),
+                            FechaCreado = new DateTime(2023, 3, 31, 12, 21, 10, 731, DateTimeKind.Local).AddTicks(6397),
                             IdType = 0,
                             Identification = "8-873-000",
                             Name = "Alexander Agrazal",
@@ -77,7 +77,7 @@ namespace Auth.Migrations
                         {
                             Id = new Guid("71c87875-4439-4d7c-ba96-f8ba9136dba3"),
                             Email = "hdegracia@gmail.com",
-                            FechaCreado = new DateTime(2023, 3, 31, 11, 52, 53, 540, DateTimeKind.Local).AddTicks(7836),
+                            FechaCreado = new DateTime(2023, 3, 31, 12, 21, 10, 731, DateTimeKind.Local).AddTicks(6403),
                             IdType = 0,
                             Identification = "8-000-387",
                             Name = "Hector De Gracia",
@@ -133,7 +133,7 @@ namespace Auth.Migrations
                         {
                             Id = new Guid("71c87875-4439-4d7c-ba96-f8ba9136dbaa"),
                             Email = "ckomalram@gmail.com",
-                            FechaCreado = new DateTime(2023, 3, 31, 11, 52, 53, 540, DateTimeKind.Local).AddTicks(6734),
+                            FechaCreado = new DateTime(2023, 3, 31, 12, 21, 10, 731, DateTimeKind.Local).AddTicks(5272),
                             IdType = 0,
                             Identification = "8-873-387",
                             Name = "Carlyle Komalram",
@@ -145,7 +145,7 @@ namespace Auth.Migrations
                         {
                             Id = new Guid("71c87875-4439-4d7c-ba96-f8ba9136dba1"),
                             Email = "yoainaris@gmail.com",
-                            FechaCreado = new DateTime(2023, 3, 31, 11, 52, 53, 540, DateTimeKind.Local).AddTicks(6751),
+                            FechaCreado = new DateTime(2023, 3, 31, 12, 21, 10, 731, DateTimeKind.Local).AddTicks(5292),
                             IdType = 0,
                             Identification = "8-920-953",
                             Name = "Yoainaris Concepcion",

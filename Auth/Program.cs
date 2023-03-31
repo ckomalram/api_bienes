@@ -13,7 +13,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Conexion a sql server
-builder.Services.AddSqlServer<PersonContext>(builder.Configuration.GetConnectionString("cnPerson"));
+builder.Services.AddSqlServer<PersonContext>(builder.Configuration.GetConnectionString("cnBbienes"));
+
+// TODO : Servicio de USUARIOS
+// TODO : Servicio de CLIENTES
 
 var app = builder.Build();
 
