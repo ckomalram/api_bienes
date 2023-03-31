@@ -1,3 +1,4 @@
+using Auth.Models;
 using Auth.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,7 +15,20 @@ public class UserController : ControllerBase
     }
     
     [HttpGet]
-    public IActionResult Get(){
-        return Ok(userservice.Get());
+    public IEnumerable<User> Get(){
+        return userservice.Get();
+        // return Ok(userservice.Get());
+    }
+
+    [HttpGet("{id}")]
+    public IActionResult GetById(Guid id){
+        return Ok(userservice.GetById(id));
+    }
+
+    [HttpPost]
+    public IActionResult Create([FromBody] User user ){
+
+        userservice.Create(user);
+        return Ok();
     }
 }

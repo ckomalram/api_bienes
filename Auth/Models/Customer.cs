@@ -8,7 +8,7 @@ namespace Auth.Models
         nombre, email, password, identificacion, idtype, role
         **/
 
-        public Guid Id { get; set; }
+        public Guid IdCustomer { get; set; }
 
         public string Name { get; set; }
         public string Email { get; set; }
