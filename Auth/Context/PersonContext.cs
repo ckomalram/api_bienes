@@ -17,14 +17,18 @@ public class PersonContext : DbContext
 
         //TODO: Datos initiales
         List<User> userInit = new List<User>();
-        userInit.Add(new User(){UserId = Guid.Parse("71c87875-4439-4d7c-ba96-f8ba9136dbaa"),Name = "Carlyle Komalram"});
-            // Email = "ckomalram@gmail.com",
-            // Password = "12345",
-            // Identification = "8-873-387",
-            // FechaCreado = DateTime.Now,
-            // TypeId = IdentificationType.Idcard,
-            // Role = Role.Admin,
-            // Status = StatusPerson.Active
+        userInit.Add(new User(){
+            UserId = Guid.Parse("71c87875-4439-4d7c-ba96-f8ba9136dbaa"),
+            Name = "Carlyle Komalram",
+            Email= "ckomalram@bandelta.com",
+            Password="12345",
+            Identification="8-888-888",
+            TypeId= IdentificationType.Idcard,
+            Role = Role.Admin,
+            Status = StatusPerson.Active,
+            FechaCreado = DateTime.Now            
+            });
+ 
 
         // Builder Usuarios
         modelbuilder.Entity<User>(user =>
@@ -32,13 +36,13 @@ public class PersonContext : DbContext
             user.ToTable("User");
             user.HasKey(p => p.UserId);
             user.Property(p => p.Name).IsRequired();
-            // user.Property(p => p.Email);
-            // user.Property(p => p.Password);
-            // user.Property(p => p.Identification);
-            // user.Property(p => p.TypeId);
-            // user.Property(p => p.Role);
-            // user.Property(p => p.Status);
-            // user.Property(p => p.FechaCreado);
+            user.Property(p => p.Email).IsRequired().HasMaxLength(150);
+            user.Property(p => p.Password).IsRequired().HasMaxLength(12);
+            user.Property(p => p.Identification).IsRequired().HasMaxLength(12);
+            user.Property(p => p.TypeId);
+            user.Property(p => p.Role);
+            user.Property(p => p.Status);
+            user.Property(p => p.FechaCreado);
 
             // user.Ignore(p => p.Resumen);
 
@@ -46,9 +50,7 @@ public class PersonContext : DbContext
         });
 
 
-
-
-        // TODO init data customer
+                // TODO init data customer
 
         // List<Customer> customerInit = new List<Customer>();
         // customerInit.Add(new Customer()
@@ -91,5 +93,6 @@ public class PersonContext : DbContext
 
         //         customer.HasData(customerInit);
         //     });
+        
     }
 }
