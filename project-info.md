@@ -24,3 +24,10 @@ https://www.postgresql.org/
 
 # Estructura de servicio
 * Auth
+
+# Pendientes 
+Repasar global json
+Middleware
+Logging
+Relaciones entre tablas
+Ignore en fluent API.

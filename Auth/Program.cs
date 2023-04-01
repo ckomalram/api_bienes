@@ -19,6 +19,7 @@ builder.Services.AddSqlServer<PersonContext>(builder.Configuration.GetConnection
 builder.Services.AddScoped<IUserService,UserService>();
 
 // TODO : Servicio de CLIENTES
+builder.Services.AddScoped<ICustomerService , CustomerService>();
 
 var app = builder.Build();
 
